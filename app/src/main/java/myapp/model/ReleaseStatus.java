@@ -5,13 +5,13 @@ import com.google.gson.annotations.SerializedName;
 public enum ReleaseStatus {
 
     @SerializedName("0")
-    OCZEKUJĄCY (0),
+    pending (0),
 
     @SerializedName("1")
-    W_TRAKCIE (1),
+    in_progress (1),
 
     @SerializedName("2")
-    ZROBIONY (2);
+    done (2);
 
     private final int value;
 

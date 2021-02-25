@@ -162,7 +162,7 @@ public class AddReleaseActivityCustViewDial extends AppCompatActivity {
                 if(errTxtView.getText().length() == 0)  {
                     // emplSelected
                     // selectedProds
-                    Release newRelease = new Release(-1, emplSelected, ReleaseStatus.OCZEKUJĄCY, selectedProds,
+                    Release newRelease = new Release(-1, emplSelected, ReleaseStatus.in_progress, selectedProds,
                             null, null);
                     Call<ResponseContainer<Release>> call = apiService.addRelease(newRelease);
                     call.enqueue(new CallbackImpl<ResponseContainer<Release>>(ADD_RELEASE_TAG) {

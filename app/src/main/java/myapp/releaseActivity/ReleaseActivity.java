@@ -159,7 +159,9 @@ public class ReleaseActivity extends AppCompatActivity {
                 for(Release rel : mReleasesList)
                     mReleaseViews.add(new ReleaseView(rel.getId(),
                             rel.getCreationDateTime(),
-                            rel.getEmployee().getName(), rel.getEmployee().getSurname()));
+                            rel.getStatus().name(),
+                            rel.getEmployee().getName(),
+                            rel.getEmployee().getSurname()));
             }
         });
     }
@@ -229,12 +231,14 @@ public class ReleaseActivity extends AppCompatActivity {
 
                     HashMap<String, String> map = new HashMap<String, String>();
 
-                    Release rel = new Release(Integer.parseInt(id), employee, ReleaseStatus.enumOfValue(status), //ReleaseStatus.valueOf(status),
+                    Release rel = new Release(Integer.parseInt(id), employee,  ReleaseStatus.enumOfValue(status), //ReleaseStatus.valueOf(status),
                             null, date_creation, null);
                     mReleasesList.add(rel);
                     mReleaseViews.add(new ReleaseView(rel.getId(),
                             rel.getCreationDateTime(),
-                            rel.getEmployee().getSurname(), rel.getEmployee().getName()));
+                            rel.getStatus().name(),
+                            rel.getEmployee().getSurname(),
+                            rel.getEmployee().getName()));
 
                     // adding each child node to HashMap key => value
                     map.put("id", id);
@@ -298,6 +302,7 @@ public class ReleaseActivity extends AppCompatActivity {
         public class ViewHolder extends RecyclerView.ViewHolder {
             private final TextView mIdTextView;
             private final TextView mDateTimeTextView;
+            private final TextView mReleaseStatusTextView;
             private final TextView mEmployeeSurnameTextView;
             private final TextView mEmployeeNameTextView;
 
@@ -311,7 +316,8 @@ public class ReleaseActivity extends AppCompatActivity {
                     }
                 });
                 mIdTextView = (TextView) v.findViewById(R.id.id_release);
-                mDateTimeTextView = (TextView) v.findViewById(R.id.date_creation);
+                mDateTimeTextView = (TextView) v.findViewById(R.id.date_creation_2);
+                mReleaseStatusTextView = (TextView) v.findViewById(R.id.release_status);
                 mEmployeeSurnameTextView = (TextView) v.findViewById(R.id.employee_surname);
                 mEmployeeNameTextView = (TextView) v.findViewById(R.id.employee_name);
             }
@@ -324,11 +330,15 @@ public class ReleaseActivity extends AppCompatActivity {
                 return mDateTimeTextView;
             }
 
-            public TextView getEmployeeSurnametextView() {
+            public TextView getReleaseStatusTextView() {
+                return mReleaseStatusTextView;
+            }
+
+            public TextView getEmployeeSurnameTextView() {
                 return mEmployeeSurnameTextView;
             }
 
-            public TextView getEmployeeNametextView() {
+            public TextView getEmployeeNameTextView() {
                 return mEmployeeNameTextView;
             }
         }
@@ -359,8 +369,9 @@ public class ReleaseActivity extends AppCompatActivity {
             // with that element
             holder.getIdTextView().setText(String.valueOf(mReleaseView.get(position).getId()));
             holder.getDateTimeTextView().setText(mReleaseView.get(position).getCreationDateTime());
-            holder.getEmployeeSurnametextView().setText(mReleaseView.get(position).getSurname());
-            holder.getEmployeeNametextView().setText(mReleaseView.get(position).getName());
+            holder.getReleaseStatusTextView().setText(String.valueOf(mReleaseView.get(position).getStatus()));
+            holder.getEmployeeSurnameTextView().setText(mReleaseView.get(position).getSurname());
+            holder.getEmployeeNameTextView().setText(mReleaseView.get(position).getName());
         }
 
         // Return the size of your dataset (invoked by the layout manager)
