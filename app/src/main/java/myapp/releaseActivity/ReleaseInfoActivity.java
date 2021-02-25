@@ -48,7 +48,7 @@ import static myapp.api.URLs.URL_GET_PRODUCTS_ORDERS;
 public class ReleaseInfoActivity extends AppCompatActivity {
 
     protected RecyclerView mRecyclerView;
-    protected ProductAdapter mProductAdapter;
+//    protected ProductAdapter mProductAdapter;
     protected RecyclerView.LayoutManager mLayoutManager;
     protected List<ProductsOrderView> mProductViews;
 
@@ -91,10 +91,10 @@ public class ReleaseInfoActivity extends AppCompatActivity {
         // get releases via async request
         // getReleases();
 
-        mProductAdapter = new ProductAdapter(mProductViews);
+//        mProductAdapter = new ProductAdapter(mProductViews);
         // Set CustomAdapter as the adapter for RecyclerView.
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(mProductAdapter);
+//        mRecyclerView.setAdapter(mProductAdapter);
 
         products = new ArrayList<HashMap<String, String>>();
     //    new getProductsList().execute();
@@ -104,12 +104,12 @@ public class ReleaseInfoActivity extends AppCompatActivity {
         mRecyclerView.addItemDecoration(itemDecoration);
     }
 
-    class getReleasesList extends AsyncTask<String, String, String> {
+ /*   class getReleasesList extends AsyncTask<String, String, String> {
 
         /**
          * Before starting background thread Show Progress Dialog
          * */
-        @Override
+ /*       @Override
         protected void onPreExecute() {
             super.onPreExecute();
 
@@ -136,11 +136,11 @@ public class ReleaseInfoActivity extends AppCompatActivity {
 
             return json;
         }
-
+*/
         /**
          * After completing background task Dismiss the progress dialog
          * **/
-        protected void onPostExecute(String json) {
+ /*       protected void onPostExecute(String json) {
 
             Boolean result = null;
             String message = null;
@@ -160,8 +160,8 @@ public class ReleaseInfoActivity extends AppCompatActivity {
                     // Wybranie poszczególnych
                     // id= jsonObj.getString("id").toInteger ?? // id konwertuj na int
                     String id = jsonObj2.getString("id");
-                    String date_creation = jsonObj2.getString("creationDate");
-                    String status = jsonObj2.getString("status");
+                    String productName = jsonObj2.getString("productName");
+                    String quantity = jsonObj2.getString("quantity");
                     JSONObject empl = jsonObj2.getJSONObject("employee");
                     Employee employee = new Employee(empl.getInt("id"),
                             empl.getString("symbol"),empl.getString("name"),
@@ -212,7 +212,7 @@ public class ReleaseInfoActivity extends AppCompatActivity {
                         setListAdapter(adapter);
                     }
                 });
-*/
+
 
                 Toast.makeText(getBaseContext(), message, Toast.LENGTH_LONG)
                         .show();
@@ -283,7 +283,7 @@ public class ReleaseInfoActivity extends AppCompatActivity {
          *
          * @param prodView List<ReleaseView> containing the data to populate views to be used by RecyclerView.
          */
-        public ProductAdapter(List<ProductsOrderView> prodView) {
+/*        public ProductAdapter(List<ProductsOrderView> prodView) {
             mProductsView = prodView;
         }
 
@@ -321,3 +321,5 @@ public class ReleaseInfoActivity extends AppCompatActivity {
     }
 
 }
+
+ */
