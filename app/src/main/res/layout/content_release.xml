@@ -47,7 +47,7 @@
 
     <TextView
         android:id="@+id/release_status"
-        android:layout_width="90dp"
+        android:layout_width="110dp"
         android:layout_height="124dp"
         android:layout_toEndOf="@id/date_creation_2"
         android:gravity="center_horizontal|center_vertical"
