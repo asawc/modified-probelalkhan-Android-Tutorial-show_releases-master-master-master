@@ -39,6 +39,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import myapp.JSONParser;
+import myapp.ScanActivity;
 import myapp.api.ApiBuilder;
 import myapp.api.CallbackImpl;
 import myapp.api.MyApi;
@@ -49,6 +50,8 @@ import myapp.model.ReleaseStatus;
 import myapp.modelView.ReleaseView;
 import retrofit2.Call;
 import retrofit2.Response;
+
+import android.app.AlertDialog;
 
 import static myapp.api.URLs.URL_GET_ALL_RELEASES;
 
@@ -142,6 +145,11 @@ public class ReleaseActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void openReleaseInfoActivity() {
+        Intent intent = new Intent(this, ReleaseInfoActivity.class);
+        startActivity(intent);
     }
 
     public void getReleases() throws IOException {
@@ -313,6 +321,7 @@ public class ReleaseActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Log.d(TAG, "Element " + getAdapterPosition() + " clicked.");
+                        openReleaseInfoActivity();
                     }
                 });
                 mIdTextView = (TextView) v.findViewById(R.id.id_release);
@@ -321,6 +330,8 @@ public class ReleaseActivity extends AppCompatActivity {
                 mEmployeeSurnameTextView = (TextView) v.findViewById(R.id.employee_surname);
                 mEmployeeNameTextView = (TextView) v.findViewById(R.id.employee_name);
             }
+
+
 
             public TextView getIdTextView() {
                 return mIdTextView;
@@ -342,6 +353,8 @@ public class ReleaseActivity extends AppCompatActivity {
                 return mEmployeeNameTextView;
             }
         }
+
+
 
         /**
          * Initialize the dataset of the Adapter.
