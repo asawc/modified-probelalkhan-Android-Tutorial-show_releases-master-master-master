@@ -82,25 +82,25 @@
         <Button
             android:id="@+id/buttonScan2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:text="Scan" />
 
         <Button
             android:id="@+id/buttonShowEmployeesActivity"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:text="Show registered employees" />
 
         <Button
             android:id="@+id/buttonFindEmployeeActivity"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:text="Find an employee" />
 
         <Button
             android:id="@+id/buttonAddEmployeeActivity"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
             android:text="Add employee" />
@@ -108,7 +108,7 @@
         <Button
             android:id="@+id/buttonAddReleaseActivity"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_marginEnd="0dp"
             android:layout_marginBottom="0dp"
             android:text="Releases" />
@@ -116,7 +116,7 @@
         <Button
             android:id="@+id/buttonLogout3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:text="Logout" />
     </LinearLayout>
 
