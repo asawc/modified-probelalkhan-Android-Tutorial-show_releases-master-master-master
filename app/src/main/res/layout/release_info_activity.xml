@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="55dp">
 
-        <include layout="@layout/release_activity_list_header"/>
+        <include layout="@layout/release_info_activity_header"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/releasesProdRecyclerView"

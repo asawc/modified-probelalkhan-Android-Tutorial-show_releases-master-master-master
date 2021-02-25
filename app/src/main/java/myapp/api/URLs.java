@@ -15,7 +15,7 @@ public class URLs {
     public static final String URL_GET_ALL_RELEASES = ROOT_URL + "get_all_releases";
     public static final String URL_ADD_EMPLOYEE= ROOT_URL + "add_employee";
     public static final String URL_ADD_RELEASE= ROOT_URL + "add_release";
-    public static final String URL_ADD_PRODUCT_ORDER= ROOT_URL + "add_product_order";
+    public static final String URL_GET_PRODUCTS_ORDERS= ROOT_URL + "get_products_order";
 
     //public static final String URL_ADD_QUANTITY = ROOT_URL + "add_quantity";
 
