@@ -11,13 +11,6 @@
     <!--
         <include layout="@layout/content_release"/>
     -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/fab"
-        app:srcCompat="@android:drawable/ic_input_add"
-        android:layout_margin="@dimen/fab_margin"
-        android:layout_gravity="bottom|end"/>
 
     <LinearLayout
         android:layout_height="wrap_content"
