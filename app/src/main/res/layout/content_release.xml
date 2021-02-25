@@ -64,9 +64,9 @@
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@id/release_status"
         android:gravity="bottom|center_horizontal"
-        android:padding="1dp"
+        android:padding="0dp"
         android:text="Employee surname"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:textSize="@dimen/release_list_item_text_size" />
 
     <TextView
@@ -77,9 +77,9 @@
         android:layout_marginTop="0dp"
         android:layout_toEndOf="@id/release_status"
         android:gravity="center_horizontal|top"
-        android:padding="1dp"
+        android:padding="0dp"
         android:text="Employee name"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:textSize="@dimen/release_list_item_text_size" />
 
 </RelativeLayout>
