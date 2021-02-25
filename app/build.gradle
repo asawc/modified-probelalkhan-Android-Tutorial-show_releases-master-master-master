@@ -9,7 +9,7 @@ android {
     //buildToolsVersion "28.0.3"
 
     defaultConfig {
-        applicationId "my_app.v8"
+        applicationId "my_app.v9"
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1

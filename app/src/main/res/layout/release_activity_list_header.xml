@@ -26,17 +26,17 @@
         android:layout_toEndOf="@+id/id">
 
         <TextView
-            android:layout_width="110dp"
+            android:layout_width="103dp"
             android:layout_height="match_parent"
             android:gravity="center_horizontal|center_vertical"
-            android:padding="5dp"
+            android:padding="3dp"
             android:text="Creation date"
             android:textAlignment="center"
             android:textSize="@dimen/release_list_item_text_size"
             android:textStyle="bold" />
 
         <TextView
-            android:layout_width="90dp"
+            android:layout_width="103dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:gravity="center_horizontal|center_vertical"

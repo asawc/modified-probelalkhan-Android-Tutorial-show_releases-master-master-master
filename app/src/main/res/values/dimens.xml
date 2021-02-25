@@ -7,5 +7,5 @@
     <dimen name="product_list_item_text_size">20sp</dimen>
     <dimen name="product_dropdown_item_text_size">16sp</dimen>
 
-    <dimen name="release_list_item_text_size">20sp</dimen>
+    <dimen name="release_list_item_text_size">19sp</dimen>
 </resources>

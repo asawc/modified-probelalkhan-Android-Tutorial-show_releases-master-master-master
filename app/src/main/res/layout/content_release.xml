@@ -36,23 +36,23 @@
 
     <TextView
         android:id="@+id/date_creation_2"
-        android:layout_width="110dp"
+        android:layout_width="103dp"
         android:layout_height="124dp"
         android:layout_toEndOf="@+id/id_release"
         android:gravity="center_horizontal|center_vertical"
         android:padding="1dp"
         android:text="10-03-2020 09:40:00"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textSize="@dimen/release_list_item_text_size" />
 
     <TextView
         android:id="@+id/release_status"
-        android:layout_width="110dp"
+        android:layout_width="103dp"
         android:layout_height="124dp"
         android:layout_toEndOf="@id/date_creation_2"
         android:gravity="center_horizontal|center_vertical"
         android:padding="1dp"
-        android:text="in progress"
+        android:text="in_progress"
         android:textAlignment="center"
         android:textSize="@dimen/release_list_item_text_size" />
 
@@ -66,7 +66,7 @@
         android:gravity="bottom|center_horizontal"
         android:padding="1dp"
         android:text="Employee surname"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textSize="@dimen/release_list_item_text_size" />
 
     <TextView
@@ -79,7 +79,7 @@
         android:gravity="center_horizontal|top"
         android:padding="1dp"
         android:text="Employee name"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textSize="@dimen/release_list_item_text_size" />
 
 </RelativeLayout>
