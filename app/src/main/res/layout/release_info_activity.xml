@@ -7,6 +7,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@+id/constraintLayout"
+        app:layout_anchorGravity="top|center">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuesday" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday" />
+    </com.google.android.material.tabs.TabLayout>
+
 
     <!--
         <include layout="@layout/content_release"/>
@@ -37,6 +60,7 @@
                 android:textAlignment="center"
                 android:text="Wydania"/>
 
+
         </androidx.appcompat.widget.Toolbar>
         <!--
             <ListView
@@ -47,13 +71,20 @@
         -->
     </LinearLayout>
 
+
+
     <RelativeLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="55dp">
 
-        <include layout="@layout/release_info_activity_header"/>
+        <include
+            layout="@layout/release_info_activity_header"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="false"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/releasesProdRecyclerView"
@@ -64,6 +95,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
 
     </RelativeLayout>
 

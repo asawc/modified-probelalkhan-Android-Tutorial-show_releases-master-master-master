@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.tabs.TabLayout;
+
 import net.simplifiedcoding.simplifiedcoding.R;
 
 import org.apache.http.HttpEntity;
@@ -80,6 +82,10 @@ public class ReleaseInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.release_info_activity);
+
+        TabLayout tabLayout = (TabLayout)findViewById(R.id.tabLayout);
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
 
         mRecyclerView = findViewById(R.id.releasesProdRecyclerView);
         mLayoutManager = new LinearLayoutManager(this);
