@@ -31,7 +31,6 @@
                 android:name="myapp.releaseActivity.ReleaseActivity"
                 android:label="@string/title_activity_release"
                 android:theme="@style/AppTheme.NoActionBar" />
-
             <uses-library
                 android:name="org.apache.http.legacy"
                 android:required="false" />
