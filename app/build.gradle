@@ -1,6 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     // Use the following syntax to access properties you define at the project level:
     // rootProject.ext.property_name
     //compileSdkVersion rootProject.ext.compileSdkVersion
@@ -55,5 +60,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //implementation 'com.google.ar:core:1.22.0'
     implementation 'com.android.support:design:28.0.0'
+    //this is for ViewPager
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    //this is for TabLayout
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
+
 
 }
