@@ -47,6 +47,12 @@ import myapp.modelView.ReleaseView;
 
 import static myapp.api.URLs.URL_GET_PRODUCTS_ORDERS;
 
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.FrameLayout;
+
+
 public class ReleaseInfoActivity extends AppCompatActivity {
 
     protected RecyclerView mRecyclerView;
@@ -83,9 +89,12 @@ public class ReleaseInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.release_info_activity);
 
-        TabLayout tabLayout = (TabLayout)findViewById(R.id.tabLayout);
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.layout,new GeneralReleaseInfFragment()).commit();
+
+     /*   TabLayout tabLayout = (TabLayout)findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 2")); */
 
         mRecyclerView = findViewById(R.id.releasesProdRecyclerView);
         mLayoutManager = new LinearLayoutManager(this);

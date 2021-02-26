@@ -7,29 +7,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_anchor="@+id/constraintLayout"
-        app:layout_anchorGravity="top|center">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Monday" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tuesday" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Wednesday" />
-    </com.google.android.material.tabs.TabLayout>
-
 
     <!--
         <include layout="@layout/content_release"/>
@@ -40,6 +17,8 @@
         android:layout_width="match_parent"
         android:id="@+id/toolbarLayout"
         android:orientation="vertical">
+
+
 
         <androidx.appcompat.widget.Toolbar
             android:layout_height="?attr/actionBarSize"
@@ -61,7 +40,18 @@
                 android:text="Wydania"/>
 
 
+
+
         </androidx.appcompat.widget.Toolbar>
+
+        <include
+            layout="@layout/tab_bar"/>
+
+        <FrameLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
         <!--
             <ListView
                 android:layout_height="match_parent"
@@ -83,8 +73,10 @@
             layout="@layout/release_info_activity_header"
             android:layout_alignParentTop="false"
             android:layout_alignParentEnd="false"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp" />
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="0dp"
+            android:layout_height="50dp"
+            android:layout_width="match_parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/releasesProdRecyclerView"
