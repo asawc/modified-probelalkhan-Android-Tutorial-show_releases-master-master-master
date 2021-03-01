@@ -1,56 +1,23 @@
 package myapp.releaseActivity;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.DividerItemDecoration;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.material.tabs.TabLayout;
 
 import net.simplifiedcoding.simplifiedcoding.R;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtilsHC4;
 import org.json.JSONArray;
-import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import myapp.JSONParser;
-import myapp.api.ApiBuilder;
 import myapp.api.MyApi;
-import myapp.model.Employee;
 import myapp.model.Product;
-import myapp.model.Release;
-import myapp.model.ReleaseStatus;
-import myapp.modelView.ProductView;
 import myapp.modelView.ProductsOrderView;
-import myapp.modelView.ReleaseView;
-
-import static myapp.api.URLs.URL_GET_PRODUCTS_ORDERS;
-
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.FrameLayout;
 
 
 public class ReleaseInfoActivity extends AppCompatActivity {
@@ -93,23 +60,24 @@ public class ReleaseInfoActivity extends AppCompatActivity {
                 .add(R.id.layout, new GeneralReleaseInfFragment()).commit();
     }
 
-    public void onClick(View v){
-        switch (v.getId()){
-            case R.id.algo_lay:
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.gen_inf_lay:
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.layout,
                                 new GeneralReleaseInfFragment()).commit();
                 break;
-            case R.id.course_lay:
+            case R.id.details_lay:
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.layout,
                                 new DetailsReleaseFragment()).commit();
                 break;
+        }
           /*  case R.id.profile_lay:
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.layout,
                                 new ProfileFragment()).commit();
-                break;*/
+                break;
         }
 
 
@@ -117,23 +85,23 @@ public class ReleaseInfoActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 2")); */
 
-        //     mRecyclerView = findViewById(R.id.releasesProdRecyclerView);
-        //     mLayoutManager = new LinearLayoutManager(this);
+            //     mRecyclerView = findViewById(R.id.releasesProdRecyclerView);
+            //     mLayoutManager = new LinearLayoutManager(this);
 
-        apiService = new ApiBuilder().getApiService();
-        mProductsList = new ArrayList<Product>();
-        mProductViews = new ArrayList<ProductsOrderView>();
+//        apiService = new ApiBuilder().getApiService();
+//        mProductsList = new ArrayList<Product>();
+//        mProductViews = new ArrayList<ProductsOrderView>();
 
-        // get releases via async request
-        // getReleases();
+            // get releases via async request
+            // getReleases();
 
 //        mProductAdapter = new ProductAdapter(mProductViews);
-        // Set CustomAdapter as the adapter for RecyclerView.
+            // Set CustomAdapter as the adapter for RecyclerView.
 //        mRecyclerView.setLayoutManager(mLayoutManager);
 //        mRecyclerView.setAdapter(mProductAdapter);
 
-        products = new ArrayList<HashMap<String, String>>();
-        //    new getProductsList().execute();
+//        products = new ArrayList<HashMap<String, String>>();
+            //    new getProductsList().execute();
 
  /*       RecyclerView.ItemDecoration itemDecoration = new
                 DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
@@ -173,9 +141,9 @@ public class ReleaseInfoActivity extends AppCompatActivity {
             return json;
         }
 */
-        /**
-         * After completing background task Dismiss the progress dialog
-         * **/
+            /**
+             * After completing background task Dismiss the progress dialog
+             * **/
  /*       protected void onPostExecute(String json) {
 
             Boolean result = null;
@@ -310,8 +278,9 @@ public class ReleaseInfoActivity extends AppCompatActivity {
         /*    public TextView getEmployeeNameTextView() {
                 return mEmployeeNameTextView;
             }*/
+        }
     }
-}
+//}
 
 
 

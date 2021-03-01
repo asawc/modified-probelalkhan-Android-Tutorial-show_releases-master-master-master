@@ -14,7 +14,7 @@ android {
     //buildToolsVersion "28.0.3"
 
     defaultConfig {
-        applicationId "my_app.v1_ip75"
+        applicationId "my_app.v10_ip75"
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
