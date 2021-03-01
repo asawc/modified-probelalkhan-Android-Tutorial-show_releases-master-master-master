@@ -1,81 +1,136 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="myapp.releaseActivity.GeneralReleaseInfFragment"
-    android:orientation="vertical">
+    tools:context="myapp.releaseActivity.ReleaseInfoActivity">
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/headerLayout"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/cardview_shadow_start_color">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/id"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_alignTop="@+id/first_line"
-            android:layout_alignBottom="@+id/second_line"
-            android:gravity="center_horizontal|center_vertical"
-            android:padding="3dp"
-            android:text="Id"
-            android:textAlignment="center"
-            android:textSize="@dimen/release_list_item_text_size"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:id="@+id/first_line"
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/id">
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:padding="3dp"
-                android:text="Product name"
-                android:textAlignment="center"
-                android:textSize="@dimen/release_list_item_text_size"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:padding="1dp"
-                android:text="Product quantity"
-                android:textAlignment="center"
-                android:textSize="@dimen/release_list_item_text_size"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal|center_vertical"
-                android:padding="0dp"
-                android:text="Status"
-                android:textAlignment="center"
-                android:textSize="@dimen/release_list_item_text_size"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/second_line"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/first_line"
-            android:layout_toEndOf="@+id/id"
-            android:orientation="horizontal">
-
-        </LinearLayout>
+            android:layout_height="wrap_content">
 
 
-    </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Release id"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+                <TextView
+                    android:id="@+id/textViewProductsymbol"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:text="00000"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="Creation date"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+                <TextView
+                    android:id="@+id/textViewProductname"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:padding="10dp"
+                    android:text="10-03-2020 09:40:00"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Employee surname"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+                <TextView
+                    android:id="@+id/textViewEmployeeSurname"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:text="Lewandowski"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+            </TableRow>
+
+            <TableRow/>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Employee name"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+                <TextView
+                    android:id="@+id/textViewEmployeeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:text="Franciszek"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+            </TableRow>
+
+            <TableRow/>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Employee symbol"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+                <TextView
+                    android:id="@+id/textViewEmployeeSymbol"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:text="RXH 0000"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textSize="@dimen/release_gen_inf" />
+
+            </TableRow>
+
+            <TableRow/>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

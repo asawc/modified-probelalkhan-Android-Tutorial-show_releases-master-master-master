@@ -56,7 +56,7 @@ import android.widget.FrameLayout;
 public class ReleaseInfoActivity extends AppCompatActivity {
 
     protected RecyclerView mRecyclerView;
-//    protected ProductAdapter mProductAdapter;
+    //    protected ProductAdapter mProductAdapter;
     protected RecyclerView.LayoutManager mLayoutManager;
     protected List<ProductsOrderView> mProductViews;
 
@@ -90,14 +90,35 @@ public class ReleaseInfoActivity extends AppCompatActivity {
         setContentView(R.layout.release_info_activity);
 
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.layout,new GeneralReleaseInfFragment()).commit();
+                .add(R.id.layout, new GeneralReleaseInfFragment()).commit();
+    }
+
+    public void onClick(View v){
+        switch (v.getId()){
+            case R.id.algo_lay:
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.layout,
+                                new GeneralReleaseInfFragment()).commit();
+                break;
+            case R.id.course_lay:
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.layout,
+                                new DetailsReleaseFragment()).commit();
+                break;
+          /*  case R.id.profile_lay:
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.layout,
+                                new ProfileFragment()).commit();
+                break;*/
+        }
+
 
      /*   TabLayout tabLayout = (TabLayout)findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 2")); */
 
-        mRecyclerView = findViewById(R.id.releasesProdRecyclerView);
-        mLayoutManager = new LinearLayoutManager(this);
+        //     mRecyclerView = findViewById(R.id.releasesProdRecyclerView);
+        //     mLayoutManager = new LinearLayoutManager(this);
 
         apiService = new ApiBuilder().getApiService();
         mProductsList = new ArrayList<Product>();
@@ -108,17 +129,17 @@ public class ReleaseInfoActivity extends AppCompatActivity {
 
 //        mProductAdapter = new ProductAdapter(mProductViews);
         // Set CustomAdapter as the adapter for RecyclerView.
-        mRecyclerView.setLayoutManager(mLayoutManager);
+//        mRecyclerView.setLayoutManager(mLayoutManager);
 //        mRecyclerView.setAdapter(mProductAdapter);
 
         products = new ArrayList<HashMap<String, String>>();
-    //    new getProductsList().execute();
+        //    new getProductsList().execute();
 
-        RecyclerView.ItemDecoration itemDecoration = new
+ /*       RecyclerView.ItemDecoration itemDecoration = new
                 DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         mRecyclerView.addItemDecoration(itemDecoration);
     }
-
+*/
  /*   class getReleasesList extends AsyncTask<String, String, String> {
 
         /**
@@ -289,7 +310,8 @@ public class ReleaseInfoActivity extends AppCompatActivity {
         /*    public TextView getEmployeeNameTextView() {
                 return mEmployeeNameTextView;
             }*/
-        }
+    }
+}
 
 
 

@@ -7,15 +7,15 @@
     android:orientation="horizontal">
 
     <LinearLayout
-        android:onClick="onClick"
         android:id="@+id/algo_lay"
-        android:layout_marginTop="4dp"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:onClick="onClick"
         android:orientation="vertical">
 
-    <!--    <ImageView
+        <!--    <ImageView
             android:layout_gravity="center"
             android:src="@drawable/ic_algorithm"
             android:layout_width="wrap_content"
@@ -25,23 +25,22 @@
 
         <TextView
             android:id="@+id/commerce_first_text"
-            android:textColor="#FFFF"
-            android:layout_marginTop="3dp"
-            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
             android:text="General information"
-            />
+            android:textAlignment="center"
+            android:textColor="#FFFF"
+            android:textSize="@dimen/release_gen_inf"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
-        android:onClick="onClick"
         android:id="@+id/course_lay"
-        android:layout_marginTop="4dp"
-        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:onClick="onClick"
         android:orientation="vertical">
 
         <!--    <ImageView
@@ -51,26 +50,25 @@
                 android:layout_height="35dp"
                 android:id="@+id/sec_icon"/> -->
 
-            <TextView
-                android:id="@+id/commerce_sec_text"
-                android:textColor="#FFFF"
-                android:layout_marginTop="3dp"
-                android:textStyle="bold"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Details"
-                />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/commerce_sec_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textAlignment="center"
+            android:textColor="#FFFF"
+            android:textSize="@dimen/release_gen_inf"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-        <LinearLayout
+       <!-- <LinearLayout
             android:onClick="onClick"
             android:id="@+id/profile_lay"
             android:layout_marginTop="4dp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:orientation="vertical">
+            android:orientation="vertical"> -->
 
             <!--    <ImageView
                     android:layout_gravity="center"
@@ -89,6 +87,6 @@
                     android:textAlignment="center"
                     android:text="Profile"
                     /> -->
-            </LinearLayout>
+        <!--    </LinearLayout> -->
 
         </LinearLayout>

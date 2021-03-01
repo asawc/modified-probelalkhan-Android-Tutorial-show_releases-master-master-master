@@ -8,4 +8,5 @@
     <dimen name="product_dropdown_item_text_size">16sp</dimen>
 
     <dimen name="release_list_item_text_size">19sp</dimen>
+    <dimen name="release_gen_inf">23sp</dimen>
 </resources>
