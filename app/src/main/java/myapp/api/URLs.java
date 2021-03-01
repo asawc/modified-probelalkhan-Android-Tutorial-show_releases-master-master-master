@@ -1,7 +1,7 @@
 package myapp.api;
 
 public class URLs {
-    public static final String BASE_URL = "http://10.0.5.137:81/Praca/";
+    public static final String BASE_URL = "http://10.0.5.75:81/Praca/";
 
     private static final String ROOT_URL = BASE_URL + "Api.php?apicall="; // 10.0.5.137 10.0.5.75 /AndroidMySQLCrudTutorial/HeroApi/v1/
 
